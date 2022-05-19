@@ -36,7 +36,8 @@ public class lesson2 {
         int num = in.nextInt();
         if (num < 0 ) {
             System.out.println("Число " + num + " отрицательное");
-        } else {
+        }
+        else {
             System.out.println("Число " + num + " положительное");
         }
     }
