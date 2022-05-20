@@ -16,6 +16,9 @@ public class lesson2 {
         System.out.print("Введи количество повторов: ");
         int howMach = in.nextInt();
         printStringSometimes(text, howMach);
+        System.out.print("Введи номер года: ");
+        int year = in.nextInt();
+        System.out.println(determineLeapYear(year));
         in.close();
     }
 
@@ -36,8 +39,7 @@ public class lesson2 {
         int num = in.nextInt();
         if (num < 0 ) {
             System.out.println("Число " + num + " отрицательное");
-        }
-        else {
+        } else {
             System.out.println("Число " + num + " положительное");
         }
     }
@@ -56,5 +58,11 @@ public class lesson2 {
         for (int i = 0; i < howMach; i++) {
             System.out.println(i + 1 + ") " + text);
         }
+    }
+
+    private static boolean determineLeapYear(int year) {
+        System.out.println("Задание №5");
+        System.out.println("Метод определяет " + year + " год високосный или нет.");
+        return (year % 400) == 0 || ((year % 100) > 0 && (year % 4) == 0);
     }
 }
