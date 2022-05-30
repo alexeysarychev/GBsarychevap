@@ -16,7 +16,7 @@ public class lesson3 {
         minMax();
         int[] sumArray  = new int[] {2, 2, 2, 1, 2, 2, 10, 1};
         System.out.println(sumElements(sumArray));
-        int step = 1;
+        int step = 3;
         int[] carouselArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8};
         carousel(step, carouselArray);
     }
@@ -119,14 +119,19 @@ public class lesson3 {
         System.out.println("[ 1, 2, 3 ] при n = 1 (на один вправо) -> [ 3, 1, 2 ]; [ 3, 5, 6, 1] при n = -2");
         System.out.println("(на два влево) -> [ 6, 1, 3, 5 ]. При каком n в какую сторону сдвиг можете выбирать сами.");
         System.out.println("Сдвиг: " + step); // Распечатаем шаг для наглядности
-        System.out.println(Arrays.toString(sendArray)); // Распечатаем начальный массив для наглядности
+//        System.out.println(Arrays.toString(sendArray)); // Распечатаем начальный массив для наглядности
         int lengthArray = sendArray.length;
         int tmp = 0;
-        for (int i = 0; i < lengthArray; i++) {
-            tmp = sendArray[(i + step) % (lengthArray - 1)];
-            sendArray[(i + step) % (lengthArray - 1)] = sendArray[i];
+        int targetIndex = 0;
+        for (int i = 0; i < lengthArray - 1; i++) {
+            targetIndex = (i + step) % (lengthArray - 1);
+            if (targetIndex == 0) {
+                targetIndex = lengthArray - 1;
+            }
+            tmp = sendArray[targetIndex];
+            sendArray[targetIndex] = sendArray[i];
             sendArray[i] = tmp;
-            System.out.println(Arrays.toString(sendArray)); // Распечатаем конечный массив для наглядности
+            System.out.println(i + ") " + Arrays.toString(sendArray) + " targetIndex " + targetIndex + " tmp " + tmp); // Распечатаем конечный массив для наглядности
         }
     }
 
