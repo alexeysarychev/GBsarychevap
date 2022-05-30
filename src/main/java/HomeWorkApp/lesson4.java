@@ -105,6 +105,7 @@ public class lesson4 {
                                     enemyX = i - 1;
                                     enemyY = j + 1;
                                     max = downLeft;
+
                                 } else if (i + 1 < RAZMER && j > 0 && map [i + 1][j - 1] == PUSTO) {
                                     enemyX = i + 1;
                                     enemyY = j - 1;
