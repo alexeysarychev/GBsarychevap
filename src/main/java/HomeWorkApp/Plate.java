@@ -11,6 +11,10 @@ public class Plate {
             food -= n;
         }
     }
+
+    public void increaseFood(int n) {
+            food += n;
+    }
     public void info() {
         System.out.println("plate: " + food);
     }

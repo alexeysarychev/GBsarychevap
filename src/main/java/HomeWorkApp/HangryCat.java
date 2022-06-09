@@ -11,15 +11,17 @@ public class HangryCat {
     }
 
     public void full(boolean w) {
-       wellFed = w;
+        wellFed = w;
     }
 
     public void eat(Plate p) {
         p.decreaseFood(appetite);
     }
+
     public void wellFed(boolean w) {
         wellFed = w;
     }
+
     public void info() {
         System.out.println("\nИмя: " + name + "\nПрожорливость: " + appetite + "\nСытость: " + wellFed);
     }
