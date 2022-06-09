@@ -1,7 +1,7 @@
 package HomeWorkApp;
 
 public class Plate {
-    private int food;
+    public int food;
     public Plate(int food) {
         this.food = food;
     }
